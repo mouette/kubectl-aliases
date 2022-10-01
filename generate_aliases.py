@@ -36,6 +36,7 @@ def main():
         ('a', 'apply --recursive -f', None, None),
         ('ak', 'apply -k', None, ['sys']),
         ('k', 'kustomize', None, ['sys']),
+        ('ed', 'edit', None, None),
         ('ex', 'exec -i -t', None, None),
         ('lo', 'logs -f', None, None),
         ('lop', 'logs -f -p', None, None),
@@ -45,15 +46,17 @@ def main():
         ('d', 'describe', None, None),
         ('rm', 'delete', None, None),
         ('run', 'run --rm --restart=Never --image-pull-policy=IfNotPresent -i -t', None, None),
+        ('c', 'config get-contexts', None, None),
+        ('cu', 'config use-context', None, None)
         ]
 
     res = [
         ('po', 'pods', ['g', 'd', 'rm'], None),
-        ('dep', 'deployment', ['g', 'd', 'rm'], None),
+        ('dep', 'deployment', ['g', 'd', 'rm', 'ed'], None),
         ('sts', 'statefulset', ['g', 'd', 'rm'], None),
-        ('svc', 'service', ['g', 'd', 'rm'], None),
-        ('ing', 'ingress', ['g', 'd', 'rm'], None),
-        ('cm', 'configmap', ['g', 'd', 'rm'], None),
+        ('svc', 'service', ['g', 'd', 'rm', 'ed'], None),
+        ('ing', 'ingress', ['g', 'd', 'rm', 'ed'], None),
+        ('cm', 'configmap', ['g', 'd', 'rm', 'ed'], None),
         ('sec', 'secret', ['g', 'd', 'rm'], None),
         ('no', 'nodes', ['g', 'd'], ['sys']),
         ('ns', 'namespaces', ['g', 'd', 'rm'], ['sys']),
