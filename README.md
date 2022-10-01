@@ -1,4 +1,12 @@
-# kubectl-aliases
+# kubectl-aliasesi
+
+Fork of https://github.com/ahmetb/kubectl-aliases to add some configuration and edition aliases.
+
+ked for edit
+
+kc to get context
+
+kcu to use a context
 
 This repository contains [a script](generate_aliases.py) to generate hundreds of
 convenient shell aliases for kubectl, so you no longer need to spell out every single
@@ -89,11 +97,14 @@ instead of aliases, so that pressing space shows the full command before executi
   * **`g`**=`get`
   * **`d`**=`describe`
   * **`rm`**=`delete`
+  * **`ed`**=`edit`
   * **`a`**:`apply -f`
   * **`ak`**:`apply -k`
   * **`k`**:`kustomize`
   * **`ex`**: `exec -i -t`
   * **`lo`**: `logs -f`
+  * **`c`**: `config get-contexts`
+  * **`cu`**: `config use-context`
 * resources:
   * **`po`**=pod, **`dep`**=`deployment`, **`ing`**=`ingress`,
     **`svc`**=`service`, **`cm`**=`configmap`, **`sec`**=`secret`,
